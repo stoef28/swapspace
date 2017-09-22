@@ -1,5 +1,5 @@
 <?php
-class survey_orm
+class message_orm
 {
 	protected $pdo_single;
 // 	protected $function_single;
@@ -19,22 +19,14 @@ class survey_orm
 	
 	/**
 	 * 
-	 * @param int $damage_case_id
-	 * @param survey[] $surveys
+	 * @param int $id
+	 * @param string[] $message_datasets
 	 */
-	public function getSurveyByDamageCaseId($damage_case_id){
+	public function getMessageDatasetsByDamageCaseId($damage_case_id){
 		
-		$result = $this->pdo_single->getResult('survey', array('where' => array('damage_case_id' => $damage_case_id)));
+		$results = $this->pdo_single->getAssoc('message', array('where' => array('damage_case_id' => $damage_case_id)));
 		
-		if(!$result){
-			$result = $this->pdo_single->getResult('damage_case', array('where' => array('id' => $damage_case_id)));
-		}
-		
-		if($result){
-			return new damage_case($result['id']);
-		}
-		
-		return null;
+		return $results;
 	}
 
 	

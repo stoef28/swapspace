@@ -1,5 +1,5 @@
 <?php
-class survey_orm
+class employee_orm
 {
 	protected $pdo_single;
 // 	protected $function_single;
@@ -20,21 +20,23 @@ class survey_orm
 	/**
 	 * 
 	 * @param int $damage_case_id
-	 * @param survey[] $surveys
+	 * @param my_doc[] $my_docs
 	 */
-	public function getSurveyByDamageCaseId($damage_case_id){
+	public function getMyDocsByDamageCaseId($damage_case_id){
 		
-		$result = $this->pdo_single->getResult('survey', array('where' => array('damage_case_id' => $damage_case_id)));
+		$results = $this->pdo_single->getAssoc('my_doc', array('where' => array('damage_case_id' => $damage_case_id)));
 		
-		if(!$result){
-			$result = $this->pdo_single->getResult('damage_case', array('where' => array('id' => $damage_case_id)));
+		$container = array();
+		foreach($results as $dataset){
+			
+			$obj = new my_doc($dataset['id']);
+			
+			if($obj->getId()){
+				$container[] = $obj;
+			}
 		}
-		
-		if($result){
-			return new damage_case($result['id']);
-		}
-		
-		return null;
+				
+		return $container;
 	}
 
 	

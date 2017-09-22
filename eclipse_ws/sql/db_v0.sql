@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 22. Sep 2017 um 17:14
+-- Erstellungszeit: 22. Sep 2017 um 18:00
 -- Server Version: 5.6.17
 -- PHP-Version: 5.5.12
 
@@ -31,12 +31,15 @@ USE `swapspace`;
 DROP TABLE IF EXISTS `damage_case`;
 CREATE TABLE IF NOT EXISTS `damage_case` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `dc_nr` text CHARACTER SET utf8 NOT NULL,
-  `password` varchar(256) CHARACTER SET utf8 NOT NULL,
-  `phone` varchar(256) CHARACTER SET utf8 NOT NULL,
-  `email` varchar(256) CHARACTER SET utf8 NOT NULL,
+  `dc_nr` text NOT NULL,
+  `password` varchar(256) NOT NULL,
+  `phone` varchar(256) NOT NULL,
+  `first_name` varchar(256) NOT NULL,
+  `last_name` varchar(256) NOT NULL,
+  `email` varchar(256) NOT NULL,
   `state` int(11) NOT NULL,
   `responsible_id` int(11) NOT NULL,
+  `survey_id` int(11) NOT NULL,
   `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `altered` datetime NOT NULL,
   `deleted` datetime NOT NULL,
@@ -47,8 +50,8 @@ CREATE TABLE IF NOT EXISTS `damage_case` (
 -- Daten für Tabelle `damage_case`
 --
 
-INSERT INTO `damage_case` (`id`, `dc_nr`, `password`, `phone`, `email`, `state`, `responsible_id`, `created`, `altered`, `deleted`) VALUES
-(1, '001', 'testpw', '0123456789', 'test@test.com', 0, 1, '2017-09-22 16:46:34', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+INSERT INTO `damage_case` (`id`, `dc_nr`, `password`, `phone`, `first_name`, `last_name`, `email`, `state`, `responsible_id`, `survey_id`, `created`, `altered`, `deleted`) VALUES
+(1, '001', 'testpw', '0123456789', '', '', 'test@test.com', 0, 1, 1, '2017-09-22 16:46:34', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
