@@ -32,10 +32,9 @@ abstract class model
 	
 	public function createPage()
 	{	
+		// only execute init. no content displayed
 		if($this->session_single->isAjaxRequest())
 		{
-			if($this->session_single->hasErrorStatusReports())
-			{	$this->createReports($this->session_single->getStatusReports(), true); }
 			return;
 		}
 		
@@ -103,22 +102,14 @@ abstract class model
 					*/ ?>
 				</div>
 				<div class="col-sm-1">
-					<img class="cover_top_close_button" src="<?php echo $this->constant_single->path('icons').'close.svg'; ?>" onclick="coverClose()"/>
+					<span onclick="coverClose()">[X]</span>
 				</div>
 			</div>
 			<?php $this->createContent(); ?>
 			<div class="row">
 				<div class="col-sm-12">
 				<div class="cover_close_col">
-					<button type="button" class="btn btn-secondary" onclick="coverClose();"><?php echo $this->dict_single->dict("close"); ?></button>
-					
-					<?php /*
-					<div class="cover_close_button" onclick="coverClose();">
-						<span>
-							<?php echo $this->dict_single->dict("close"); ?>
-						</span>
-					</div>
-					*/ ?>
+					<button type="button" class="btn btn-secondary" onclick="coverClose();">Schliessen</button>
 				</div>
 			</div>
 		</div>
@@ -139,7 +130,7 @@ abstract class model
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<link rel="icon" href="">
 		
-		<title>Firmenradar</title>
+		<title>Swap Space</title>
 		
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/jquery-ui.css">		
@@ -149,14 +140,7 @@ abstract class model
 		<link rel="stylesheet" href="css/myCSS/style.css">
 		<link rel="stylesheet" href="css/myCSS/cover.css">
 
-		<?php 
-		/*
-		<script type="text/javascript">
-			var date_format = "<?php echo $_SESSION['date_format']; ?>";
-			var date_regex 	= <?php echo $_SESSION['date_regex']; ?>;
-			var email_regex = /^[-a-z0-9~!$%^&*_=+\.}{\'?]+@[a-z0-9_]*\.[a-z]{2,3}$/i;
-		</script>
-		*/ ?>
+		
 	</head>
 	<body class="app header-fixed aside-menu-fixed aside-menu-hidden sidebar-hidden">
 	<?php 
@@ -164,7 +148,6 @@ abstract class model
 	
 	private function createEnd()
 	{	?>
-
 		<!-- Bootstrap and necessary plugins -->
 		<script type="text/javascript" src="js/jquery-2.2.3.js"></script>
 		<script type="text/javascript" src="js/jquery-ui.js"></script>
@@ -173,14 +156,13 @@ abstract class model
 		<!-- Firmenradar specific Scripts -->
 		
 		<script type="text/javascript" src="js/file_upload.js"></script>
-		
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/jquery_binder.js"></script>
 		
 	</body>
 </html>
 		<?php 
 	}
-	
-
 	
 	/**
 	 * 
