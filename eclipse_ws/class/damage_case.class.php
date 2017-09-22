@@ -1,7 +1,7 @@
 <?php
 class damage_case extends object
 {
-	private $characteristics = array(
+	protected $characteristics = array(
 			'id' 			=> array('value' => NULL, 'type' => ''),
 			'dc_nr' 		=> array('value' => NULL, 'type' => ''),
 			'password' 		=> array('value' => NULL, 'type' => ''),

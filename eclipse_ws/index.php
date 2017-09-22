@@ -22,7 +22,7 @@ $_SESSION['date_userformat_replace'] 	= "$3.$2.$1";
 
 function __autoload($class_name)
 {
-	$regular_classes = array('singleton', 'controller', 'page', 'class', 'template', 'module', 'orm');
+	$regular_classes = array('singleton', 'controller', 'class', 'model', 'orm');
 	
 	foreach($regular_classes as $identifier)
 	{	
@@ -44,7 +44,7 @@ function __autoload($class_name)
 					$path = 'class/orm/';
 					break;
 					
-				case 'signleton':
+				case 'singleton':
 					$path = 'class/singleton/';
 					break;
 					
@@ -139,7 +139,7 @@ $session_single->setPage($page_settings['page_name']);
 
 // $dict_single->init($page_settings['page_name']);
 
-$approved_page = $page_settings['page_name'] . '_page';
+$approved_page = $page_settings['page_name'] . '_model';
 
 if(!isset($page_settings['page_params']))
 {	$page_settings['page_params'] = array(); }

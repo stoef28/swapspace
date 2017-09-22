@@ -1,7 +1,7 @@
 <?php
 class my_doc extends object
 {
-	private $characteristics = array(
+	protected $characteristics = array(
 			'id' 			=> array('value' => NULL, 'type' => ''),
 			'first_name' 	=> array('value' => NULL, 'type' => ''),
 			'last_name' 	=> array('value' => NULL, 'type' => ''),

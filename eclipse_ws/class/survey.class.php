@@ -44,12 +44,13 @@ class survey extends object
 	
 	
 	public function generateFormHtml(){
+
+		$html = '';
 		
 		$survey = $this->dom_doc->getElementById('survey');
-		
-		foreach($surveys as $childnode)
-		
-		$html = '';
+		foreach($surveys as $childnode){
+			
+		}
 		
 		return $html;
 	}
