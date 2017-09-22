@@ -8,7 +8,7 @@ class chat_messages_model extends model
 		$last_id = (isset($_SESSION['last_message_id']) ? $_SESSION['last_message_id'] : 0);
 		
 		$user = $this->session_single->getActiveUser();
-		
+				
 		$message_orm = new message_orm();
 		$messages = $message_orm->getMessageDatasetsByDamageCaseId($user->getId(), $last_id);
 				

@@ -1,1 +1,2 @@
 ALTER TABLE `message` CHANGE `text` `text` TEXT NOT NULL; 
+ALTER TABLE `message` ADD `id` SERIAL NOT NULL FIRST; 

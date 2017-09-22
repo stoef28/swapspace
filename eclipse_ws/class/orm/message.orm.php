@@ -31,7 +31,11 @@ class message_orm
 				WHERE damage_case_id = :dc_id 
 				AND id > :last_id 
 				ORDER BY ID DESC', 
-				array('dc_id' => $damage_case_id, ':last_id' => $last_id));
+				array(':dc_id' => $damage_case_id, ':last_id' => $last_id));
+		
+		var_dump($damage_case_id);
+		var_dump($last_id);
+		var_dump($results);
 		
 		return $results;
 	}
