@@ -33,10 +33,27 @@ class employee extends object
 	}
 	
 	
-	
+	/**
+	 * @return string $name - $first_name.' '.$last_name
+	 */
 	public function getName(){
 		return $this->getCharacteristic('first_name').' '.$this->getCharacteristic('lats_name');
 	}
 	
+	public function getEmployeeNr(){
+		return $this->getCharacteristic('e_nr');
+	}
+	
+	public function getEmployeeNr(){
+		return $this->getCharacteristic('e_nr');
+	}
+	
+	public function getPhone(){
+		return $this->getCharacteristic('phone');
+	}
+	
+	protected function getTablename(){
+		return 'employee';
+	}
 }
 ?>

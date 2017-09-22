@@ -38,5 +38,10 @@ class my_doc extends object
 		return $this->getCharacteristic('first_name').' '.$this->getCharacteristic('lats_name');
 	}
 	
+
+	protected function getTablename(){
+		return 'my_doc';
+	}
+	
 }
 ?>

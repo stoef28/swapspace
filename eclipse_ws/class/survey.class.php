@@ -84,6 +84,8 @@ class survey extends object
 		return $this->constant_single->getSurveyFilePath() . $this->function_single->encrypt($this->getId(), 'survey_id') . '.xml';
 	}
 	
-	
+	protected function getTablename(){
+		return 'survey';
+	}
 }
 ?>

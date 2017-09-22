@@ -91,5 +91,10 @@ class damage_case extends object
 		return $this->getCharacteristic('survey_id');
 	}
 	
+	protected function getTablename(){
+		return 'damage_case';
+	}
+	
+	
 }
 ?>
