@@ -8,6 +8,7 @@ class employee_dashboard_model extends model
 		$user = new damage_case(1);
 		$user->login($user->getDamageCaseNr(), 'testpw');
 		
+		$_SESSION['last_message_id'] = 0;
 		$_SESSION['employee_id'] = 1;
 		
 	}
@@ -17,7 +18,7 @@ class employee_dashboard_model extends model
 		?>
 		
 		<div class="" id="chat_window">
-			<div class= id="message_container">
+			<div class="" id="message_container">
 				<div class="chat_item received"></div>
 			</div>
 			<input type="text" value="" name="chat_message" id="chat_message" /><button type="button" onclick="sendMessage('<?php echo $dc_ide; ?>');">Senden</button>

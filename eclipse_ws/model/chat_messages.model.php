@@ -11,7 +11,7 @@ class chat_messages_model extends model
 				
 		$message_orm = new message_orm();
 		$messages = $message_orm->getMessageDatasetsByDamageCaseId($user->getId(), $last_id);
-				
+			
 		$inverted 	= !(isset($_SESSION['employee_id']) && $_SESSION['employee_id']);
 		foreach(array_reverse($messages) as $dataset){
 			

@@ -6,7 +6,8 @@ class dashboard_model extends model
 	protected function init($params){
 		
 		unset($_SESSION['employee_id']);
-		
+
+		$_SESSION['last_message_id'] = 0;
 	}
 	protected function createContent(){
 	

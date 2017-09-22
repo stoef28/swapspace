@@ -138,10 +138,6 @@ function sendMessage(dc_ide, text){
         
         success: function(response){
   
-        	if(response){
-        	
-        	$('div#message_container').append('<div class="chat_item">'+text+'</div>');
-        	}
         }        
     });
 }
