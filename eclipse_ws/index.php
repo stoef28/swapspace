@@ -89,7 +89,6 @@ $requests = array(
 		
 );
 
-
 $cover_request 	= false;
 $ajax_request 	= false;
 if(isset($_GET['page']))
