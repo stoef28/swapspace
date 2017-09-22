@@ -13,7 +13,7 @@ class damage_case extends object
 			'responsible_id'=> array('value' => NULL, 'type' => ''),
 			'survey_id' 	=> array('value' => NULL, 'type' => ''), // the selected survey for this damage case
 			'created' 		=> array('value' => NULL, 'type' => 'date'),
-			'last_login' 	=> array('value' => NULL, 'type' => 'date'),
+			'altered' 		=> array('value' => NULL, 'type' => 'date'),
 			'deleted' 		=> array('value' => NULL, 'type' => 'date'),
 			
 	);
@@ -21,7 +21,7 @@ class damage_case extends object
 	
 	public function init($id){
 		
-		$result = $this->pdo_single->getResult('SELECT * FROM damage_case WHERE id=:id', array(':id' => $id));
+		$result = $this->pdo_single->getResult('damage_case', array('where' => array('id' => $id)));
 		
 		if(!$result){
 			return;
@@ -38,21 +38,21 @@ class damage_case extends object
 		$this->setCharacteristic('responsible_id', $result['responsible_id']);
 		$this->setCharacteristic('survey_id', $result['survey_id']);
 		$this->initCharacteristicDate('created', new DateTime($result['created']));
-		$this->initCharacteristicDate('submitted', new DateTime($result['submitted']));
+		$this->initCharacteristicDate('altered', new DateTime($result['altered']));
 		$this->initCharacteristicDate('deleted', new DateTime($result['deleted']));
 	}
 	
 	/**
 	 * 
-	 * @param string $email
+	 * @param string $dc_nr
 	 * @param string $password
 	 * @param int $status - 0 => success, 1 => wrong email or pw
 	 */
-	public function login($email, $password){
-		
+	public function login($dc_nr, $password){
+				
 		$damage_case_orm = new damage_case_orm();
 		
-		$dc_obj = $damage_case_orm->getDamageCaseByEmail($email);
+		$dc_obj = $damage_case_orm->getDamageCaseByDcNr($dc_nr);
 		
 		if($dc_obj){
 			

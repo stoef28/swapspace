@@ -130,7 +130,7 @@ abstract class model
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<link rel="icon" href="">
 		
-		<title>Swap Space</title>
+		<title>Swape Space</title>
 		
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/jquery-ui.css">		

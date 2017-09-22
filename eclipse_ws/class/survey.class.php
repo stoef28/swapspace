@@ -16,6 +16,7 @@ class survey extends object
 	private $dom_doc = null;
 	
 	public function init($id){
+		$id = 1;
 		
 		$result = $this->pdo_single->getResult('SELECT * FROM survey WHERE id=:id', array(':id' => $id));
 		

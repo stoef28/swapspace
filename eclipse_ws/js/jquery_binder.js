@@ -1,6 +1,8 @@
 
 $(document).ready(function() {
 	bind_events();
+	auto_chat_update();
+	
 });
 
 function bind_events()

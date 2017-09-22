@@ -86,6 +86,7 @@ $requests = array(
 		'survey'					=> 'damage_case',		
 		'chat_messages'				=> 'damage_case',		
 		'send_message'				=> 'damage_case',		
+		'employee_dashboard'		=> 'default',		
 		
 );
 

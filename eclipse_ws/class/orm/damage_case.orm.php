@@ -31,12 +31,12 @@ class damage_case_orm
 
 	/**
 	 * 
-	 * @param string $email
+	 * @param string $dcnr
 	 * @param damage_case $dc_obj
 	 */
-	public function getDamageCaseByEmail($email){
+	public function getDamageCaseByDcNr($dcnr){
 	
-		$result = $this->pdo_single->getResult('damage_case', array('where' => array('email' => $email)));
+		$result = $this->pdo_single->getResult('damage_case', array('where' => array('dc_nr' => $dcnr)));
 	
 		if($result){
 			return new damage_case($result['id']);

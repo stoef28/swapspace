@@ -1,0 +1,1 @@
+ALTER TABLE `message` CHANGE `text` `text` TEXT NOT NULL; 
