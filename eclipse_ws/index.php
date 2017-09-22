@@ -1,9 +1,5 @@
 <?php
 
-// Author:	Basil Baumgartner
-// Date:	11.05.2016
-// Version:	0.1
-
 header('Content-Type: text/html; charset=utf-8');
 // echo "<br>internal encoding: ".mb_internal_encoding();
 mb_internal_encoding('UTF-8');
@@ -87,8 +83,12 @@ $pdo_single = pdo_singleton::getInstance();
 $dict_single = dict_singleton::getInstance();
 
 $requests = array(
-		'survey_info'				=> 'default',
-		'user_not_verified'			=> 'default',
+		'login'						=> 'default',
+		
+		
+		'damage_case'				=> 'damage_case',
+		'file_upload'				=> 'damage_case',
+		'survey'					=> 'damage_case',
 		
 		// offline pages
 		'welcome' 					=> 'default',
