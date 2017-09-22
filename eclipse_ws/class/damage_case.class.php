@@ -57,6 +57,10 @@ class damage_case extends object
 		if($dc_obj){
 			
 			if($dc_obj->getPassword() == $password){
+				
+				$this->init($dc_obj->getId());
+				$_SESSION['user_id'] = $this->getId();
+		
 				return 1;
 			}
 		}

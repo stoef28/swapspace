@@ -1,8 +1,5 @@
 <?php
 
-// Date: 	29.04.2016
-// Version:	0.2
-// Author:	Basil Baumgartner
 
 class pdo_singleton extends PDO
 {
@@ -29,13 +26,13 @@ class pdo_singleton extends PDO
 
 		if(strpos($_SERVER['SERVER_NAME'], 'localhost') === false)
 		{	
-			parent::__construct('mysql:host=localhost:3306;dbname=firmenradar;charset=utf8', 'php', '12php4ME!');
+			parent::__construct('mysql:host=localhost:3306;dbname=swapspace;charset=utf8', 'root', '');
 // 			$this->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);	
 // 			$this->query("set character set utf8;");
 		}
 		else
 		{ 	
-			parent::__construct('mysql:host=localhost;dbname=firmenradar;charset=utf8', 'root', '');
+			parent::__construct('mysql:host=localhost;dbname=swapspace;charset=utf8', 'root', '');
 // 			$this->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 // 			$this->query("set character set utf8;");
 		}
@@ -56,16 +53,7 @@ class pdo_singleton extends PDO
 	);
 	
 	private $index = 0;
-	
-	
-// 	public function init($host, $db, $username, $pw, $driver_options=NULL)
-// 	{
-// 		$this->DBObj = new PDO('mysql:host='.$host.';dbname='.$db, $username, $pw);
-// 	}
-	
-	// todo baumg: keys und value als ein assioziative arrey behandeln:
-	// "user" => "test", "pw" => H�SH
-	
+		
 	
 	/**
 	 * 

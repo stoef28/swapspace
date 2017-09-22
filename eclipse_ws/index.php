@@ -74,65 +74,18 @@ foreach($_POST as $key => $post_item)
 
 $session_single = session_singleton::getInstance();
 
-$pdo_single = pdo_singleton::getInstance();
-// if(strpos($_SERVER['SERVER_NAME'], 'localhost') === false)
-// {	$pdo_single->init('localhost:3306', 	'firmenradar'	, 'php'		, '12php4ME!'); }
-// else 
-// { 	$pdo_single->init('localhost', 		'firmenradar'	, 'root'	, ''); }
-
-$dict_single = dict_singleton::getInstance();
+$pdo_single 	= pdo_singleton::getInstance();
+// $dict_single 	= dict_singleton::getInstance();
 
 $requests = array(
 		'login'						=> 'default',
 		
 		
-		'damage_case'				=> 'damage_case',
+		'dashboard'					=> 'damage_case',
 		'file_upload'				=> 'damage_case',
-		'survey'					=> 'damage_case',
-		
-		// offline pages
-		'welcome' 					=> 'default',
-		'about_team'				=> 'default',
-		'launch_phases'				=> 'default',
-		'agb' 						=> 'default',
-		'faq' 						=> 'default',	// editable dict
-		'impressum' 				=> 'default',	// editable dict
-		'contact'	 				=> 'default',	// editable dict
-		
-		'file_upload_handler'		=> 'default',
-		'active_dropdown'			=> 'default',
-		'verify_email' 				=> 'login',
-		'login' 					=> 'login',
-		'blog_overview' 			=> 'blog',
-		'blog_entry'				=> 'blog',
-		'blog_entry_edit'			=> 'blog',
-		'user_profile'				=> 'user',
-		'image_gallery'				=> 'admin',
-		'register'					=> 'register',
-		
-		'manage_locals_overview'	=> 'admin',
-		'manage_locals'				=> 'admin',
-		'edit_dropdowns_overview'	=> 'admin',
-		'edit_dropdowns'			=> 'admin',
-		'report_overview'			=> 'admin',
-		'report_entry'				=> 'admin',
-		'report_entry_create'		=> 'admin',
-		'company_search'			=> 'admin',
-		'company_edit'				=> 'admin',
-		'company_show'				=> 'admin',
-		
-		
-		'survey_overview'			=> 'survey',
-		'survey_start'				=> 'survey',
-		'survey'					=> 'survey',
-		'survey_end'				=> 'survey',
-		
-		'csv_parser'				=> 'default',
-		
-		'city_select_json'			=> 'default',
-		
-		// active dropdowns
-		'search_city'				=> 'default',
+		'survey'					=> 'damage_case',		
+		'chat_messages'				=> 'damage_case',		
+		'send_message'				=> 'damage_case',		
 		
 );
 
@@ -155,8 +108,6 @@ if(isset($_GET['page']))
 	
 	}else 
 	{
-// 		var_dump($page_name);
-// 		var_dump($_POST);
 	}
 	
 	if(isset($requests[$page_name]))
@@ -165,35 +116,24 @@ if(isset($_GET['page']))
 		$requesting_page	= $page_name;
 	}else
 	{
-		$controller_name 	= 'user';
-		$requesting_page 	= 'user_home';
+		$controller_name 	= 'damage_case';
+		$requesting_page 	= 'dashboard';
 	}
 }else 
 {
 	$controller_name 	= 'default';
-	$requesting_page 	= 'welcome';
+	$requesting_page 	= 'login';
 }
 
-// var_dump($controller_name);
-// var_dump($requesting_page);
-// var_dump($page_name);
-// var_dump($cover_request);
-// var_dump($ajax_request);
-// die("ASDF");
 
 $session_single->setCoverRequest($cover_request);;
 $session_single->setAjaxRequest($ajax_request);;
-
-// var_dump($session_single->getUserData());
-// var_dump($requesting_page);
 
 $controller_name 	.= '_controller';
 $page_controller 	= new $controller_name(); 
 $page_settings 		= $page_controller->requestingAction($requesting_page);
 unset($page_controller);
 
-// var_dump($page_settings);
-// var_dump($page_settings);
 
 $session_single->setPage($page_settings['page_name']);
 
@@ -204,7 +144,6 @@ $approved_page = $page_settings['page_name'] . '_page';
 if(!isset($page_settings['page_params']))
 {	$page_settings['page_params'] = array(); }
 
-// die($approved_page);
 $my_page = new $approved_page($page_settings['page_params']);
 
 
