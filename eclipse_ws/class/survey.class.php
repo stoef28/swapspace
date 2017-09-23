@@ -51,7 +51,7 @@ class survey extends object
 	
 	public function generateFormHtml(){
 
-		$html = '';
+		$html = '<form method="dashboard" action="post">';
 		
 		// doesn't work for some reason
 // 		$survey = $this->dom_doc->getElementById('survey');
@@ -64,6 +64,8 @@ class survey extends object
 		}
 		
 		$this->iterateDomDoc($survey, $html);
+		
+		$html .= '<button type="submit">Absenden</button></form>';
 		return $html;
 	}
 	
@@ -88,7 +90,7 @@ class survey extends object
 				
 				$hidden = $this->getAttribute($child_node, 'hidden');
 				$id 	= $this->getAttribute($child_node, 'id');
-				$hidden = false;
+
 				$html .= '<div id="'.$id.'" style="'.($hidden ? 'display: none;' : '').'">';
 					$this->iterateDomDoc($child_node, $html);
 				$html .= '</div>';
@@ -106,9 +108,14 @@ class survey extends object
 				
 			}else if($child_node->nodeName == 'option'){	
 				
-				$toggle = $this->getAttribute($child_node, '');
+				$has_toggle = $this->getAttribute($child_node, 'show');
+				$toggle_string = '';
 				
-				$html .= '<input type="radio" value="" name="'.$mother_name.'">&nbsp;'.$child_node->nodeValue.'</input>&nbsp;';
+				if($has_toggle){
+					$toggle_string = 'onchange="toggleDiv(this, \''.$has_toggle.'\', event);"';
+				}
+				
+				$html .= '<input type="radio" value="" name="'.$mother_name.'" '.$toggle_string.'>&nbsp;'.$child_node->nodeValue.'</input>&nbsp;';
 
 			}else if($child_node->nodeName == 'answer'){
 				
@@ -119,7 +126,7 @@ class survey extends object
 				$html .= $child_node->nodeValue;
 				
 				if($mother_type == 'textarea'){
-					$html .= '</textarea>';
+					$html .= '</textarea><br>';
 				}
 			}
 			
