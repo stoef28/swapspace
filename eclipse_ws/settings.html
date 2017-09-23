@@ -13,17 +13,34 @@
 </head>
 
 <body>
-  <header>
-      <!-- Navbar -->
-      <div class="w3-top">
-          <ul class="w3-navbar w3-blue w3-card-2 w3-left-align">
-              <li class=""><a href="dashboard.html" class="w3-hover-white w3-center"><i class="fa fa-tachometer"></i> Dashboard</a></li>
+    <header>
+        <!-- Navbar -->
+        <div class="w3-top">
+            <ul class="w3-navbar w3-blue w3-card-2 w3-left-align">
+                <li class="" style="height:46.5px"><a href="dashboard.html" class="w3-hover-white w3-center w3-padding-12"><i class="fa fa-tachometer fa-lg" ></i> Dashboard</a></li>
+                <li class=" w3-right w3-padding-large w3-hover-white" style="cursor: pointer;">
 
-              <li class=""><a href="#contact" class="w3-padding-12 w3-hover-white">Kontakt</a></li>
-              <li class=" w3-right w3-red w3-padding-large w3-hover-white" onclick="document.getElementById('id01').style.display='block'" style="cursor: pointer;"><i class="fa fa-cog" aria-hidden="true"></i> Login</li>
-          </ul>
-      </div>
-  </header>
+                    <a class="w3-hover-white" href="settings.html" style="padding: 0px;">
+
+                        <i class="fa fa-cog fa-lg" aria-hidden="true"></i> <span href="settings.html" class="w3-hide-small">Einstellungen</span>
+
+                    </a>
+
+                    </li>
+                <div class="w3-dropdown-hover w3-right">
+                    <div class="w3-button w3-padding-large w3-hover-white" style="height:46px"><img src="pics/deutschland-fahne-001-rechteckig-200x333-flaggenbilder.de.gif" alt="" class="w3-hover-opacity" style="height:100%"></div>
+                    <div class="w3-dropdown-content w3-blue" style="width:50px">
+                        <a href="#" class="w3-bar-item w3-button" style="width:75px"><img src="pics/frankreich-fahne-002-rechteckig-schwarz-200x300-flaggenbilder.de.gif" alt="" class="w3-hover-opacity" style="width:100%"></a>
+                        <a href="#" class="w3-bar-item w3-button" style="width:75px"><img src="pics/italien-fahne-001-rechteckig-200x300-flaggenbilder.de.gif" alt="" class="w3-hover-opacity" style="width:100%"></a>
+                        <a href="#" class="w3-bar-item w3-button" style="width:75px"><img src="pics/vereinigtes_koenigreich-fahne-003-rechteckig-weiss-200x400-flaggenbilder.de.gif" alt="" class="w3-hover-opacity" style="width:100%"></a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </header>
+
+
+
   <main>
     <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
     <div class="w3-justify w3-border-bottom w3-padding-bottom">
@@ -43,7 +60,7 @@
         erhalten?</p>
       <form>
         <input type="checkbox" name="mobile" value=""> SMS<br>
-        <input type="checkbox" name="email" value=""> Email<br>
+        <input type="checkbox" name="email" value="" checked=""> Email<br>
         <input type="submit" value="Ändern!" class="w3-btn w3-margin-top w3-blue">
       </form>
     </div>
@@ -52,7 +69,7 @@
       <h1>Notification Level</h1>
       <p>Welche Art von Mitteilungen möchten Sie erhalten?</p>
       <form>
-        <input type="checkbox" name="less-notification" value=""> Relevante Mitteilungen<br>
+        <input type="checkbox" name="less-notification" value="" checked=""> Relevante Mitteilungen<br>
         <input type="checkbox" name="no-notification" value=""> Keine Mitteilungen<br>
         <input type="submit" value="Ändern!" class="w3-btn w3-margin-top w3-blue">
       </form>
