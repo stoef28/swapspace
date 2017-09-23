@@ -94,6 +94,11 @@ $cover_request 	= false;
 $ajax_request 	= false;
 if(isset($_GET['page']))
 {
+	if($_GET['page'] == 'logout'){
+		$session_single->getActiveUser()->logout();
+		$_GET['page'] = 'login';
+	}
+	
 	$page_name = $_GET['page'];
 	if(substr($_GET['page'], strlen($_GET['page'])-6) == '_cover')
 	{	$page_name = substr($_GET['page'], 0, strlen($_GET['page'])-6); 

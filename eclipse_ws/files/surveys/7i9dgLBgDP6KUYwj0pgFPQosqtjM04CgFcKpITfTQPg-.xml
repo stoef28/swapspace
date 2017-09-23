@@ -41,7 +41,7 @@
 			<title>	
 				Ist der Sturz infolge Glatteis und/oder Schnee erfolgt?
 			</title>
-			<option show="ice_snow_questions">Ja</option>
+			<option show="snow_questions">Ja</option>
 			<option>Nein</option>
 		</question>
 		<container id="snow_questions" hidden="1">

@@ -67,6 +67,11 @@ class damage_case extends object
 		return 0;
 	}
 	
+	public function logout(){
+		$_SESSION['user_id'] = 0;
+		$_SESSION['employee_id'] = 0;		
+	}
+	
 	public function getDamageCaseNr(){
 		return $this->getCharacteristic('dc_nr');
 	}

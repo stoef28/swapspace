@@ -170,4 +170,27 @@ async function loadMessage(){
 }
 
 var form_container = [];
+// fix just_showed with events:
+var just_showed = false;
 
+function toggleDiv(input_obj, div_id, show, event){
+	
+	console.log('toggleDiv: '+div_id+' // '+show);
+	console.log(input_obj);
+	
+	if(typeof div_id == 'undefined' && typeof show == 'undefined'){
+		if(!just_showed){
+			div_id = form_container[$(input_obj).attr('name')];
+			if(typeof div_id != 'undefined'){
+				$('#'+div_id).slideUp();
+			}
+		}
+		just_showed = false;
+		
+	}else{
+		$('#'+div_id).slideDown();
+		form_container[$(input_obj).attr('name')] = div_id; 
+		
+		just_showed = true;
+	}
+}

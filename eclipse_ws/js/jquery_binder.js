@@ -17,6 +17,8 @@ function bind_events()
 //	$('form.file_upload_image_gallery').on('submit', uploadFiles);
 	$('form.file_upload_image_gallery_cover').on('submit', uploadImageGalleryCover);
 	
-	
+	$("input[type='radio']").on('change', function(){
+		toggleDiv($(this));
+	});
 }
 
