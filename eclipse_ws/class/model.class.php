@@ -2,12 +2,13 @@
 
 abstract class model
 {
-	protected $title = '';
-	protected $title_class = 'page_title';
-	protected $back = array('target' => '');
-	protected $show_title = true;
-	protected $has_content_wraper = true;
-	protected $has_cards = false;
+// 	protected $title = '';
+// 	protected $title_class = 'page_title';
+// 	protected $back = array('target' => '');
+// 	protected $show_title = true;
+// 	protected $has_content_wraper = true;
+// 	protected $has_cards = false;
+	protected $chat_active = false;
 
 	protected $pdo_single;
 	protected $session_single;
@@ -54,6 +55,39 @@ abstract class model
 			<div class=" w3-content w3-center w3-animate-bottom " style="max-width:1200px; margin-top:50px">
 				<?php $this->createContent(); ?>
 			</div>
+			
+			<?php if($this->isChatActive()): ?>
+			<div id="chatwindow"  class="w3-border-blue chatwindow w3-hide">
+	            <div onclick="closeChatWindow()" class="w3-container w3-blue">
+	                <span>Chat</span>
+	            </div>
+	            <div class="w3-container messagewindow">
+	                <div class="left">
+	                    <span>hi</span>
+	                </div>
+	                <div class="left">
+	                    <span>how are you?</span>
+	                </div>
+	                <div class="right">
+	                    <span>shut up!</span>
+	                </div>
+	
+	            </div>
+	            <div class=" w3-container" >
+	                <form class="" action="index.html" method="post">
+	                    <input type="text" name="" value="" style="width:180px">
+	                    <input class="w3-btn w3-blue w3-hover-shadow" type="submit" name="" value="Send" style="height: 28.5px; margin-bottom:3px; padding-top:3px; width:76px">
+	                </form>
+	            </div>
+	
+	        </div>
+	
+	
+	
+	        <div id="chatbutton" onclick="openChatWindow()" class="w3-border-blue w3-center w3-hover-blue chatbutton w3-show">
+	            <span>Chat</span>
+	        </div>
+			<?php endif; ?>
 		</main>
 
 		<?php
@@ -105,10 +139,10 @@ abstract class model
 
 		<link rel="stylesheet" href="css/w3.css">
 		<link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/jquery-ui.css">
-
+	
 
 		<!-- My CSS Sheets -->
 		<link rel="stylesheet" href="css/myCSS/style.css">
@@ -166,7 +200,11 @@ abstract class model
 	protected function hasContentWraper()
 	{	return $this->has_content_wraper; }
 
-
+	protected function showChat(){
+		$this->chat_active = true;
+	}
+	protected function isChatActive(){
+		return $this->chat_active;
 
 }
 ?>

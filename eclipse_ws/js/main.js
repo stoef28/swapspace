@@ -115,6 +115,23 @@ function coverClose()
 function gotoPage(page)
 {	window.location = page; }
 
+function openChatWindow() {
+    var x = document.getElementById("chatwindow");
+    x.className = x.className.replace(" w3-hide", " w3-show");
+
+    var y = document.getElementById("chatbutton");
+    y.className = y.className.replace(" w3-show", " w3-hide");
+
+}
+
+function closeChatWindow() {
+    var x = document.getElementById("chatwindow");
+    x.className = x.className.replace(" w3-show", " w3-hide");
+
+    var y = document.getElementById("chatbutton");
+    y.className = y.className.replace(" w3-hide", " w3-show");
+}
+
 function sendMessage(dc_ide, text){
 	
 	text = $("input#chat_message").val();
