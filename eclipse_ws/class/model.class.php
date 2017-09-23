@@ -152,6 +152,7 @@ abstract class model
 
 
 	</head>
+	<body>
 	
 	<?php
 	}
