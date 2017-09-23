@@ -7,24 +7,171 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Dashboard</title>
 </head>
+
+<script>
+function openChatWindow() {
+    var x = document.getElementById("chatwindow");
+    x.className = x.className.replace(" w3-hide", " w3-show");
+
+    var y = document.getElementById("chatbutton");
+    y.className = y.className.replace(" w3-show", " w3-hide");
+
+}
+
+function closeChatWindow() {
+    var x = document.getElementById("chatwindow");
+    x.className = x.className.replace(" w3-show", " w3-hide");
+
+    var y = document.getElementById("chatbutton");
+    y.className = y.className.replace(" w3-hide", " w3-show");
+}
+</script>
 
 <body>
     <header>
         <!-- Navbar -->
         <div class="w3-top">
             <ul class="w3-navbar w3-blue w3-card-2 w3-left-align">
-                <li class=""><a href="dashboard.html" class="w3-hover-white w3-center"><i class="fa fa-tachometer"></i> Dashboard</a></li>
-
-                <li class=""><a href="#contact" class="w3-padding-12 w3-hover-white">Kontakt</a></li>
-                <li class=" w3-right w3-red w3-padding-large w3-hover-white" onclick="document.getElementById('id01').style.display='block'" style="cursor: pointer;"><i class="fa fa-cog" aria-hidden="true"></i> Login</li>
+                <li class="" style="height:46.5px"><a href="dashboard.html" class="w3-hover-white w3-center w3-padding-12"><i class="fa fa-tachometer fa-lg" ></i> Dashboard</a></li>
+                <li class=" w3-right w3-padding-large w3-hover-white" onclick="document.getElementById('id01').style.display='block'" style="cursor: pointer;"><i class="fa fa-cog fa-lg" aria-hidden="true"></i> <span class="w3-hide-small">Einstellungen</span></li>
+                <div class="w3-dropdown-hover w3-right">
+                    <div class="w3-button w3-padding-large w3-hover-white" style="height:46px"><img src="pics/deutschland-fahne-001-rechteckig-200x333-flaggenbilder.de.gif" alt="" class="w3-hover-opacity" style="height:100%"></div>
+                    <div class="w3-dropdown-content w3-blue" style="width:50px">
+                        <a href="#" class="w3-bar-item w3-button" style="width:75px"><img src="pics/frankreich-fahne-002-rechteckig-schwarz-200x300-flaggenbilder.de.gif" alt="" class="w3-hover-opacity" style="width:100%"></a>
+                        <a href="#" class="w3-bar-item w3-button" style="width:75px"><img src="pics/italien-fahne-001-rechteckig-200x300-flaggenbilder.de.gif" alt="" class="w3-hover-opacity" style="width:100%"></a>
+                        <a href="#" class="w3-bar-item w3-button" style="width:75px"><img src="pics/vereinigtes_koenigreich-fahne-003-rechteckig-weiss-200x400-flaggenbilder.de.gif" alt="" class="w3-hover-opacity" style="width:100%"></a>
+                    </div>
+                </div>
             </ul>
         </div>
     </header>
     <main>
+
+
+        <div class=" w3-content w3-center w3-animate-bottom " style="max-width:1200px; margin-top:50px">
+
+
+            <div class="w3-half w3-left-align">
+                <div class="w3-card-4 w3-margin" style="height:300px">
+                    <div class="w3-container">
+                        <h1>Herzlich Willkommen auf Swap Space!</h1>
+                        <p>Alle ihre Daten an einem Ort. Wir wünschen ihnen gute Besserung.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="w3-half w3-left-align ">
+                <div class="w3-card-4 w3-justify  w3-margin" style="min-height:300px">
+                    <div class="w3-container">
+                        <h1>Status</h1>
+                        <h2>Abklärung Sachverhalt</h2>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="w3-half w3-left-align">
+                <div class="w3-card-4 w3-margin" style="height:300px">
+                    <div class="w3-container">
+                        <h1>My Documents</h1>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="w3-half w3-left-align">
+                <div class="w3-card-4 w3-margin" style="height:300px">
+                    <div class="w3-container">
+                        <h1>Pendenzen</h1>
+                        <p>Keine Pendenzen ausstehend</p>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="w3-half w3-left-align ">
+                <div class="w3-card-4 w3-margin" style="min-height:300px">
+                    <div class="w3-container ">
+                        <h1>Wichtige Infos</h1>
+
+                        <table class="w3-table w3-bordered">
+                            <tr>
+                                <th style="padding-left: 5px">Schaden-Nr.:</th>
+                                <th>29/000001/17.9</th>
+                            </tr>
+                            <tr>
+                                <th style="padding-left: 5px">Ansprechperson:</th>
+                                <th>Cyrill Hasler</th>
+                            </tr>
+                            <tr>
+                                <th style="padding-left: 5px">Status:</th>
+                                <th>Abklärung Sachverhalt</th>
+                            </tr>
+                        </table>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+        <div id="chatwindow"  class="w3-border-blue chatwindow w3-hide">
+            <div onclick="closeChatWindow()" class="w3-container w3-blue">
+                <span>Chat</span>
+            </div>
+            <div class="w3-container messagewindow">
+                <div class="left">
+                    <span>hi</span>
+                </div>
+                <div class="left">
+                    <span>how are you?</span>
+                </div>
+                <div class="right">
+                    <span>shut up!</span>
+                </div>
+
+            </div>
+            <div class=" w3-container" >
+                <form class="" action="index.html" method="post">
+                    <input type="text" name="" value="" style="width:200px">
+                    <input type="submit" name="" value="Send">
+                </form>
+            </div>
+
+        </div>
+
+
+
+        <div id="chatbutton" onclick="openChatWindow()" class="w3-border-blue w3-center w3-hover-blue chatbutton w3-show">
+            <span>Chat</span>
+        </div>
+
+
+
+
+
 
     </main>
 </body>
