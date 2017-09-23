@@ -89,13 +89,13 @@ class function_singleton
 	
 	public function encrypt($string, $cypher)
 	{
-		if (trim($string)=='') {die('nope'); }	
+		if (trim($string)=='') {die('encrypt error'); }	
 		return str_replace('.', '_hdsp_', $this->urlsafe_b64encode($this->my_encode($string, $cypher))); 
 	}
 	
 	public function decrypt($string, $cypher)
 	{
-		if (trim($string)=='') {die('nope'); }
+		if (trim($string)=='') {die('dycrypt error'); }
 		return $this->my_decode($this->urlsafe_b64decode(str_replace('_hdsp_', '.', $string)), $cypher);	
 	}
 	

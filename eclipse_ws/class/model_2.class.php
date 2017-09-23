@@ -33,8 +33,6 @@ abstract class model
 
 	public function createPage()
 	{
-		$dc_ide = $this->function_single->encrypt($this->session_single->getActiveUser()->getId(), 'damage_case_id');
-		
 		// only execute init. no content displayed
 		if($this->session_single->isAjaxRequest())
 		{
@@ -59,11 +57,11 @@ abstract class model
 			</div>
 			
 			<?php if($this->isChatActive()): ?>
-			<div class="w3-border-blue chatwindow w3-hide" id="chatwindow">
+			<div id="chatwindow"  class="w3-border-blue chatwindow w3-hide">
 	            <div onclick="closeChatWindow()" class="w3-container w3-blue">
 	                <span>Chat</span>
 	            </div>
-	            <div class="w3-container messagewindow" id="message_container">
+	            <div class="w3-container messagewindow">
 	                <div class="left">
 	                    <span>hi</span>
 	                </div>
@@ -76,8 +74,8 @@ abstract class model
 	
 	            </div>
 	            <div class=" w3-container" >
-	                <form class="" action="index.html" method="post" onsubmit="sendMessage('<?php echo $dc_ide; ?>'); return false;">
-	                    <input type="text" name="" value="" style="width:180px" id="chat_message" />
+	                <form class="" action="index.html" method="post">
+	                    <input type="text" name="" value="" style="width:180px">
 	                    <input class="w3-btn w3-blue w3-hover-shadow" type="submit" name="" value="Send" style="height: 28.5px; margin-bottom:3px; padding-top:3px; width:76px">
 	                </form>
 	            </div>
@@ -87,9 +85,6 @@ abstract class model
 	        <div id="chatbutton" onclick="openChatWindow()" class="w3-border-blue w3-center w3-hover-blue chatbutton w3-show">
 	            <span>Chat</span>
 	        </div>
-	        <script type="text/javascript">
-				chat_is_running = true;
-			</script>
 			<?php endif; ?>
 		</main>
 

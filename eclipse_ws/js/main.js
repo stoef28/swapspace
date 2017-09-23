@@ -135,7 +135,7 @@ function closeChatWindow() {
 function sendMessage(dc_ide, text){
 	
 	text = $("input#chat_message").val();
-	
+
 	var ajex = $.ajax({
         headers: {
             "Content-type": "application/x-www-form-urlencoded"
@@ -145,7 +145,7 @@ function sendMessage(dc_ide, text){
         data: "dc_ide="+dc_ide+"&text="+text,
         
         success: function(response){
-  
+        	text = $("input#chat_message").val('');
         }        
     });
 }
@@ -171,11 +171,11 @@ async function loadMessage(){
         success: function(response){
   
         	if(response){
-        		if($('div#chat_window').hasClass('hidden') && $('div#chat_window').hasClass('blinking')){
-        			$('div#chat_window').removeClass('blinking');
+        		if($('div#chatwindow').hasClass('hidden') && $('div#chatwindow').hasClass('blinking')){
+        			$('div#chatwindow').removeClass('blinking');
         			
-        		}else if($('div#chat_window').hasClass('hidden')){
-        			$('div#chat_window').addClass('blinking');
+        		}else if($('div#chatwindow').hasClass('hidden')){
+        			$('div#chatwindow').addClass('blinking');
         			
         		}else{
         			$('div#message_container').append(response);

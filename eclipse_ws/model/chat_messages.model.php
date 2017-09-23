@@ -17,8 +17,8 @@ class chat_messages_model extends model
 			
 			$is_inbox =  ($inverted ? !$dataset['is_inbox'] : $dataset['is_inbox']);
 						
-			?><div class="chat_item <?php echo ($is_inbox ? 'received' : ''); ?>">
-				<?php echo $dataset['text']?>
+			?><div class="<?php echo ($is_inbox ? 'left' : 'right'); ?>">
+				<span><?php echo $dataset['text']?></span>
 			</div><?php 
 			$_SESSION['last_message_id'] = $dataset['id'];
 		}

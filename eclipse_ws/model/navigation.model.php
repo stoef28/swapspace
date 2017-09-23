@@ -17,7 +17,7 @@ class navigation_model extends model
 		        <!-- Navbar -->
 		        <div class="w3-top">
 		            <ul class="w3-navbar w3-blue w3-card-2 w3-left-align">
-		                <li class="" style="height:46.5px"><a href="dashboard.html" class="w3-hover-white w3-center w3-padding-12"><i class="fa fa-tachometer fa-lg" ></i> Dashboard</a></li>
+		                <li class="" style="height:46.5px"><a href="dashboard" class="w3-hover-white w3-center w3-padding-12"><i class="fa fa-tachometer fa-lg" ></i> Dashboard</a></li>
 		                <li class=" w3-right w3-padding-large w3-hover-white" style="cursor: pointer;">
 		                    <a class="w3-hover-white" href="logout" style="padding: 0px;">
 		                        <i class="fa fa-cog fa-lg" aria-hidden="true"></i> <span href="settings.html" class="w3-hide-small">Logout</span>

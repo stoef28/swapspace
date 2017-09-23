@@ -7,10 +7,9 @@ class damage_case_controller extends _main_controller
 	}
 	
 	public function requestingAction($action) 
-	{	
+	{			
 		if(!$this->session_single->isLoggedIn()){
-			
-			return array('page_name' => 'login');
+			$this->redirectTo('login');
 		}
 		return array('page_name' => $action); 
 	}

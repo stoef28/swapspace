@@ -14,9 +14,7 @@ class send_message_model extends model
 			
 			$is_inbox 	= (isset($_SESSION['employee_id']) && $_SESSION['employee_id']);
 			$text	 	= $_POST['text'];
-			
-			var_dump($text);
-			
+						
 			$success = $this->pdo_single->setInsert('message', array('insert' => array(
 					'employee_id' => $e_id,
 					'damage_case_id' => $dc_id,
