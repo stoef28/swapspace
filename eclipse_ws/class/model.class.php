@@ -61,6 +61,16 @@ abstract class model
 	                <span>Chat</span>
 	            </div>
 	            <div class="w3-container messagewindow" id="message_container">	
+		            <div class="left">
+						<span>Haben Sie Fragen, kann ich Ihnen helfen?</span>
+					</div>
+		            <div class="right">
+						<span>Ich habe ein neues Foto von der Unfallstelle erstellt, können Sie dieses gebrauchen?</span>
+					</div>
+		            <div class="left">
+						<span>Ja sehr gerne, Sie können dieses unter folgendem Link gleich uploaden</span>
+					</div>
+	            
 	            </div>
 	            <div class=" w3-container" >
 	                <form class="" action="index.html" method="post" onsubmit="sendMessage('<?php echo $dc_ide; ?>'); return false;">

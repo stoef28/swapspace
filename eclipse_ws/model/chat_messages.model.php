@@ -15,11 +15,13 @@ class chat_messages_model extends model
 		$is_customer = !(isset($_SESSION['employee_id']) && $_SESSION['employee_id']);
 		$inverted 	= $is_customer;
 	
+		/*
 		if($is_customer): ?>
 		<div class="<?php echo ($is_inbox ? 'left' : 'right'); ?>">
 				<span>Haben Sie Fragen, kann ich Ihnen helfen?</span>
 		</div>
 		<?php endif;
+		*/
 		
 		foreach(array_reverse($messages) as $dataset){
 			

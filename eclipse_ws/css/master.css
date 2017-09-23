@@ -1,3 +1,12 @@
+#message_container
+{
+	font-size: 13px;
+}
+.timeline-heading > h4
+{
+	font-weight: bold;
+}
+
 .chatbutton {
     border-width: 3px;
     border-style: solid;
