@@ -33,7 +33,9 @@ abstract class model
 
 	public function createPage()
 	{
-		$dc_ide = $this->function_single->encrypt($this->session_single->getActiveUser()->getId(), 'damage_case_id');
+		$id = ($this->session_single->getActiveUser()->getId() ? $this->session_single->getActiveUser()->getId() : '0');
+		
+		$dc_ide = $this->function_single->encrypt($id, 'damage_case_id');
 		
 		// only execute init. no content displayed
 		if($this->session_single->isAjaxRequest())
@@ -43,11 +45,6 @@ abstract class model
 
 		$this->createHead();
 
-		// Cover Container
-		?>
-		
-
-		<?php
 		$navigation_page = new navigation_model(array());
 		$navigation_page->createContent();
 
