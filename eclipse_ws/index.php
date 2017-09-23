@@ -96,7 +96,7 @@ if(isset($_GET['page']))
 {
 	if($_GET['page'] == 'logout'){
 		$session_single->getActiveUser()->logout();
-		$_GET['page'] = 'login';
+		die('<script type="text/javascript">window.location = "login";</script>');
 	}
 	
 	$page_name = $_GET['page'];

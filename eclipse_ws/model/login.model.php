@@ -75,8 +75,7 @@ protected function init($params)
           <input class="w3-input w3-border w3-margin-bottom form-control" id="login_email" type="text" placeholder="Nr." name="dc_nr" required>
           <label><b>Passwort</b></label>
           <input class="w3-input w3-border form-control" type="password" placeholder="Passwort" name="password" required>
-          <button name="submit" value="login" class="w3-btn w3-block w3-blue w3-section w3-padding" type="submit" style="width:200px">Login</button>
-		  <span id="login_response"></span>
+		  <br><span id="login_response"></span>
 
           <button name="submit" value="login" class="w3-btn w3-block w3-section w3-padding" type="submit" style="width:200px; background-color: #004c92; color: #fff;">Login</button>
         </div>
