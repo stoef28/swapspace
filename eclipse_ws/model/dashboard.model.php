@@ -16,9 +16,9 @@ class dashboard_model extends model
 		$dc_ide = $this->function_single->encrypt($this->session_single->getActiveUser()->getId(), 'damage_case_id');
 		?>
 
-			<div class="w3-half w3-left-align backgroundpic">
-                <div class="w3-card-4 w3-margin" style="height:300px">
-                    <div class="w3-container">
+			<div class="w3-half w3-left-align ">
+                <div class="w3-card-4 w3-margin backgroundpic" style="height:300px">
+                    <div class="w3-container" style="color: white;">
                         <h1>Willkommen auf Swap Space!</h1>
                         <p>Hier finden Sie alle Informationen auf einen Blick. <br>
 							Wir wünschen Ihnen gute Besserung.</p>
