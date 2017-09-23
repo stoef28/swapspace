@@ -26,7 +26,7 @@ class navigation_model extends model
 		                </li>
 		                -->
 		                <li class=" w3-right w3-padding-large w3-hover-white" style="cursor: pointer;">
-		                    <a class="w3-hover-white" href="settings.html" style="padding: 0px;">
+		                    <a class="w3-hover-white" href="settings" style="padding: 0px;">
 		                        <i class="fa fa-cog fa-lg" aria-hidden="true"></i> <span href="settings.html" class="w3-hide-small">Einstellungen</span>
 		                    </a>
 		                </li>

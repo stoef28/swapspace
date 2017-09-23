@@ -82,6 +82,7 @@ $requests = array(
 		
 		
 		'dashboard'					=> 'damage_case',
+		'settings'					=> 'damage_case',
 		'file_upload'				=> 'damage_case',
 		'survey'					=> 'damage_case',		
 		'chat_messages'				=> 'damage_case',		
