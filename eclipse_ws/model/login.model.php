@@ -17,7 +17,8 @@ protected function init($params)
 				$status = $user_obj->login($_POST['dc_nr'], $_POST['password']);
 
 				if($status == 1){
-					die('<script type="text/javascript">window.location = "dashboard";</script>');
+					$ide = $this->function_single->encrypt('1', 'survey_id');
+					die('<script type="text/javascript">window.location = "survey&survey_ide='.$ide.'";</script>');
 				}
 			}
 
@@ -71,7 +72,7 @@ protected function init($params)
           <label><b>Passwort</b></label>
           <input class="w3-input w3-border form-control" type="password" placeholder="Passwort" name="password" required>
           <button name="submit" value="login" class="w3-btn w3-block w3-blue w3-section w3-padding" type="submit" style="width:200px">Login</button>
-
+		  <span id="login_response"></span>
         </div>
       </form>
 

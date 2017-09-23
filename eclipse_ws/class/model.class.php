@@ -49,16 +49,13 @@ abstract class model
 		$navigation_page->createContent();
 
 		?>
+ 		<main>
 
-		<div class="app-body">
+			<div class=" w3-content w3-center w3-animate-bottom " style="max-width:1200px; margin-top:50px">
+				<?php $this->createContent(); ?>
+			</div>
+		</main>
 
-			
-										<?php $this->createContent(); ?>
-
-
-			</main>
-
-		</div> <!-- END div.app-body -->
 		<?php
 		$footer_page = new footer_model(array());
 		$footer_page->createContent();
