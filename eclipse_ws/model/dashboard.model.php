@@ -42,7 +42,7 @@ class dashboard_model extends model
                             </tr>
 							<tr>
                                 <th style="padding-left: 5px">Tel:</th>
-                                <th>58 285 76 97</th>
+                                <th>058 285 76 97</th>
                             </tr>
 							<tr>
                                 <th style="padding-left: 5px">E-Mail:</th>
@@ -54,7 +54,7 @@ class dashboard_model extends model
                             </tr>
 							<tr>
                                 <th style="padding-left: 5px">Leistungsübersicht:</th>
-                                <th>Sehe "Meine Dokumente"</th>
+                                <th>Siehe "Meine Dokumente"</th>
                             </tr>
                         </table>
 

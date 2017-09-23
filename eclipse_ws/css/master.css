@@ -80,11 +80,3 @@ img.logo {
     margin-right: auto;
     margin-bottom: 0px;
 }
-
-
-.backgroundpic {
-    height: 300px;
-    background-image: url(../pics/background2.jpg);
-    background-repeat: no-repeat;
-    background-position: bottom;
-}
