@@ -127,18 +127,18 @@ abstract class model
 
 		<title>Swap Space</title>
 
-		<link rel="stylesheet" href="css/w3.css">
 		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/w3.css">
 	    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/jquery-ui.css">
 	
 
 		<!-- My CSS Sheets -->
-		<link rel="stylesheet" href="css/master.css">
 		<link rel="stylesheet" href="css/metisMenu.min.css" >
 	    <link rel="stylesheet" href="css/sb-admin-2.css">
 	    <link rel="stylesheet" href="css/morris.css">
+		<link rel="stylesheet" href="css/master.css">
 
 
 	</head>
