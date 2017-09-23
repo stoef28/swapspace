@@ -104,7 +104,7 @@ class survey extends object
 				$this->iterateDomDoc($child_node, $html);
 
 			}else if($child_node->nodeName == 'title'){
-				$html .= '<div style="text-align:justify"><span class="title">'.(self::$node_depth == 3 ? self::$question_counter++.'. ' : '').$child_node->nodeValue.'</span><br>';
+				$html .= '<span class="title">'.(self::$node_depth == 3 ? self::$question_counter++.'. ' : '').$child_node->nodeValue.'</span><br>';
 
 			}else if($child_node->nodeName == 'option'){
 

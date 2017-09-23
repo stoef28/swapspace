@@ -24,7 +24,9 @@ class survey_model extends model
 	
 	protected function createContent()
 	{	
+		echo '<div style="text-align: justify">';
 		echo $this->survey_obj->generateFormHtml();
+		echo '</div>';
 	}
 	
 	

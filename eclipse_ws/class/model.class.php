@@ -51,7 +51,7 @@ abstract class model
 		?>
  		<main>
 
-			<div class=" w3-content w3-center w3-animate-bottom " style="max-width:1200px; margin-top:50px; padding-top: 20px;">
+			<div class=" w3-content w3-center w3-animate-bottom " style="max-width:1200px; margin-top:50px; padding-top: 20px; padding-bottom: 20px;">
 				<?php $this->createContent(); ?>
 			</div>
 			
