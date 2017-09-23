@@ -38,7 +38,19 @@ function closeChatWindow() {
         <div class="w3-top">
             <ul class="w3-navbar w3-blue w3-card-2 w3-left-align">
                 <li class="" style="height:46.5px"><a href="dashboard.html" class="w3-hover-white w3-center w3-padding-12"><i class="fa fa-tachometer fa-lg" ></i> Dashboard</a></li>
-                <li class=" w3-right w3-padding-large w3-hover-white" onclick="document.getElementById('id01').style.display='block'" style="cursor: pointer;"><i class="fa fa-cog fa-lg" aria-hidden="true"></i> <span class="w3-hide-small">Einstellungen</span></li>
+                <li class=" w3-right w3-padding-large w3-hover-white" style="cursor: pointer;">
+
+                    <a class="w3-hover-white" href="settings.html" style="padding: 0px;">
+
+                        <i class="fa fa-cog fa-lg" aria-hidden="true"></i> <span href="settings.html" class="w3-hide-small">Einstellungen</span>
+
+                    </a>
+
+                    </li>
+
+
+
+
                 <div class="w3-dropdown-hover w3-right">
                     <div class="w3-button w3-padding-large w3-hover-white" style="height:46px"><img src="pics/deutschland-fahne-001-rechteckig-200x333-flaggenbilder.de.gif" alt="" class="w3-hover-opacity" style="height:100%"></div>
                     <div class="w3-dropdown-content w3-blue" style="width:50px">
@@ -50,6 +62,8 @@ function closeChatWindow() {
             </ul>
         </div>
     </header>
+
+
     <main>
 
 
@@ -67,66 +81,6 @@ function closeChatWindow() {
 
 
 
-            <div class="w3-half w3-left-align ">
-                <div class="w3-card-4 w3-justify  w3-margin" style="min-height:300px">
-                    <div class="w3-container">
-                        <h1>Status</h1>
-                        <h2>Abklärung Sachverhalt</h2>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="w3-half w3-left-align">
-                <div class="w3-card-4 w3-margin" style="height:300px">
-                    <div class="w3-container w3-row">
-                        <h1 class="w3-threequarter" style="display: inline-block">Meine Dokumente</h1>
-                        <button class="w3-btn w3-blue w3-right w3-margin-top w3-rest" type="button" name="Upload">Upload</button>
-                    </div>
-                    <div class="w3-container">
-                        <div class="w3-margin-top w3-border" style="overflow: auto; height:197.5px;">
-
-
-                        <table class="w3-striped w3-table w3-bordered ">
-                            <tr>
-                                <td><i class="fa fa-file-pdf-o fa-lg w3-margin-right" ></i>Ärztliches Zeugnis.pdf</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fa fa-file-pdf-o fa-lg w3-margin-right" ></i>Document 1.pdf</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fa fa-file-pdf-o fa-lg w3-margin-right" ></i>Document 2.pdf</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fa fa-file-image-o fa-lg w3-margin-right" ></i>Unfallbild_1.jpg</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fa fa-file-image-o fa-lg w3-margin-right" ></i>Unfallbild_2.jpg</td>
-                            </tr>
-
-
-
-
-
-                        </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="w3-half w3-left-align">
-                <div class="w3-card-4 w3-margin" style="height:300px">
-                    <div class="w3-container">
-                        <h1>Pendenzen</h1>
-                        <p>Keine Pendenzen ausstehend</p>
-
-                    </div>
-                </div>
-            </div>
 
 
             <div class="w3-half w3-left-align ">
@@ -157,6 +111,83 @@ function closeChatWindow() {
 
 
 
+            <div class="w3-half w3-left-align">
+                <div class="w3-card-4 w3-margin" style="height:300px">
+                    <div class="w3-container">
+                        <h1>Pendenzen</h1>
+                        <p>Keine Pendenzen ausstehend</p>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="w3-half w3-left-align ">
+                <div class="w3-card-4 w3-justify  w3-margin" style="min-height:300px">
+                    <div class="w3-container">
+                        <h1>Status</h1>
+                        <h3>Abklärung Sachverhalt</h3>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                        <a href="statusoverview.html"> weitere infos</a></p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="w3-half w3-left-align">
+                <div class="w3-card-4 w3-margin" style="height:300px">
+                    <div class="w3-container w3-row">
+                        <div class="w3-col s12 l8 m12" >
+                            <h1 class="" style="display: inline-block">Meine Dokumente</h1>
+                        </div>
+                        <div class="w3-col s12 l4 m12">
+                            <button class="w3-btn w3-blue w3-right w3-margin-top" style="width:100%" type="button" name="Upload">Upload</button>
+                        </div>
+
+                    </div>
+                    <div class="w3-container" style="">
+                        <div class="w3-margin-top w3-border" style="overflow:auto; max-height:155px">
+
+
+                        <table class="w3-striped w3-table w3-bordered">
+                            <tr>
+                                <td><i class="fa fa-file-pdf-o fa-lg w3-margin-right" ></i>Ärztliches Zeugnis.pdf</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa fa-file-pdf-o fa-lg w3-margin-right" ></i>Document 1.pdf</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa fa-file-image-o fa-lg w3-margin-right" ></i>Unfallbild_1.jpg</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa fa-file-image-o fa-lg w3-margin-right" ></i>Unfallbild_2.jpg</td>
+                            </tr>
+
+
+
+
+
+                        </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -183,8 +214,8 @@ function closeChatWindow() {
             </div>
             <div class=" w3-container" >
                 <form class="" action="index.html" method="post">
-                    <input type="text" name="" value="" style="width:200px">
-                    <input type="submit" name="" value="Send">
+                    <input type="text" name="" value="" style="width:180px">
+                    <input class="w3-btn w3-blue w3-hover-shadow" type="submit" name="" value="Send" style="height: 28.5px; margin-bottom:3px; padding-top:3px; width:76px">
                 </form>
             </div>
 

@@ -42,15 +42,7 @@ abstract class model
 
 		// Cover Container
 		?>
-		<div id="dropdown_container"></div>
-
-		<div id="none" style="display: none;"></div>
-
-		<div id="cover_background"></div>
-		<div id="cover">
-			<div id="cover_container">
-			</div>
-		</div>
+		
 
 		<?php
 		$navigation_page = new navigation_model(array());
@@ -60,27 +52,9 @@ abstract class model
 
 		<div class="app-body">
 
-			<main class="main">
-
-				<div class="container-fluid">
-					<div id="ui-view">
-						<div class="row">
-							<div class="col-md-12">
-								<div class="card">
-									<div class="card-block">
-										<h4 class="card-title mb-0"><?php echo $this->title; ?></h4>
-										<div class="small text-muted">asdf insert text</div>
-										<hr class="mb-4">
-
+			
 										<?php $this->createContent(); ?>
 
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /.conainer-fluid -->
 
 			</main>
 
@@ -142,10 +116,11 @@ abstract class model
 		<!-- My CSS Sheets -->
 		<link rel="stylesheet" href="css/myCSS/style.css">
 		<link rel="stylesheet" href="css/myCSS/cover.css">
+		<link rel="stylesheet" href="css/master.css">
 
 
 	</head>
-	<body class="app header-fixed aside-menu-fixed aside-menu-hidden sidebar-hidden">
+	
 	<?php
 	}
 
