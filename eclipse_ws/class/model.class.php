@@ -51,7 +51,7 @@ abstract class model
 		?>
  		<main>
 
-			<div class=" w3-content w3-center w3-animate-bottom " style="max-width:1200px; margin-top:50px">
+			<div class=" w3-content w3-center w3-animate-bottom " style="max-width:1200px; margin-top:50px; padding-top: 20px;">
 				<?php $this->createContent(); ?>
 			</div>
 			
@@ -60,17 +60,7 @@ abstract class model
 	            <div onclick="closeChatWindow()" class="w3-container w3-blue">
 	                <span>Chat</span>
 	            </div>
-	            <div class="w3-container messagewindow" id="message_container">
-	                <div class="left">
-	                    <span>hi</span>
-	                </div>
-	                <div class="left">
-	                    <span>how are you?</span>
-	                </div>
-	                <div class="right">
-	                    <span>shut up!</span>
-	                </div>
-	
+	            <div class="w3-container messagewindow" id="message_container">	
 	            </div>
 	            <div class=" w3-container" >
 	                <form class="" action="index.html" method="post" onsubmit="sendMessage('<?php echo $dc_ide; ?>'); return false;">
@@ -145,9 +135,10 @@ abstract class model
 	
 
 		<!-- My CSS Sheets -->
-		<link rel="stylesheet" href="css/myCSS/style.css">
-		<link rel="stylesheet" href="css/myCSS/cover.css">
 		<link rel="stylesheet" href="css/master.css">
+		<link rel="stylesheet" href="css/metisMenu.min.css" >
+	    <link rel="stylesheet" href="css/sb-admin-2.css">
+	    <link rel="stylesheet" href="css/morris.css">
 
 
 	</head>

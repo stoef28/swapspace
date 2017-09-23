@@ -12,19 +12,27 @@ class chat_messages_model extends model
 		$message_orm = new message_orm();
 		$messages = $message_orm->getMessageDatasetsByDamageCaseId($user->getId(), $last_id);
 			
-		$inverted 	= !(isset($_SESSION['employee_id']) && $_SESSION['employee_id']);
+		$is_customer = !(isset($_SESSION['employee_id']) && $_SESSION['employee_id']);
+		$inverted 	= $is_customer;
+	
+		if($is_customer): ?>
+		<div class="<?php echo ($is_inbox ? 'left' : 'right'); ?>">
+				<span>Haben Sie Fragen, kann ich Ihnen helfen?</span>
+		</div>
+		<?php endif;
+		
 		foreach(array_reverse($messages) as $dataset){
 			
-			$is_inbox =  ($inverted ? !$dataset['is_inbox'] : $dataset['is_inbox']);
-						
-			?><div class="<?php echo ($is_inbox ? 'left' : 'right'); ?>">
+			$is_inbox =  ($inverted ? !$dataset['is_inbox'] : $dataset['is_inbox']); 
+			?>
+			<div class="<?php echo ($is_inbox ? 'left' : 'right'); ?>">
 				<span><?php echo $dataset['text']?></span>
-			</div><?php 
+			</div>
+			<?php 
 			$_SESSION['last_message_id'] = $dataset['id'];
 		}
-			
-		
 	}
+	
 	protected function createContent(){
 	
 	}
