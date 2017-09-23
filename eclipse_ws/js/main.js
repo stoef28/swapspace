@@ -115,15 +115,6 @@ function coverClose()
 function gotoPage(page)
 {	window.location = page; }
 
-function showChat(){
-	$('div#chat_window').addClass('show_chat');
-	$('div#chat_window').removeClass('blinking');
-}
-
-function hideChat(){
-	$('div#chat_window').removeClass('show_chat');
-}
-
 function sendMessage(dc_ide, text){
 	
 	text = $("input#chat_message").val();
@@ -178,4 +169,5 @@ async function loadMessage(){
     });
 }
 
+var form_container = [];
 
