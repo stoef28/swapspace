@@ -1,13 +1,112 @@
- <?xml version="1.0" encoding="UTF-8"?>
- <survey name="" id="survey">
- 
+<?xml version="1.0" encoding="UTF-8"?>
+<survey name="stairfall" id="survey">
 	<container id="">
-	</container>
-	<questioncontainer id="">
-		<question type="select">
-			<option></option>
+		<question type="textarea" name="description">
+			<title>Sie melden uns, dass Sie auf einer Treppe gestürzt sind. Bitte schildern Sie uns genau, wie es zu dem Sturz gekommen ist.  </title>
+			<answer></answer>
 		</question>
-		<answer></answer>
-	</questioncontainer>
-	
+	</container>
+	<container id="">
+		<question type="radio" name="stair_type" >
+			<title>Handelt es sich bei der Treppe um eine…</title> 
+			<option>Treppe innerhalb eines Gebäudes</option>
+			<option>Aussentreppe</option>
+		</question>
+		<container id="">
+		<question type="textarea" name="address" >
+			<title>Bitte geben Sie uns die Adresse der Liegenschaft bzw. des Ortes an, wo sich die Treppe befindet. Im Weiteren bitten wir Sie - sofern es Ihnen möglich ist - die Unfallstelle nach der Umfrage auf einem Plan (z.B. Google-Maps) unter "Meine Dokumente" hochzuladen. Besten Dank.  </title> 
+			<answer></answer>
+		</question>
+	</container>
+	</container>
+	<container id="">
+		<question type="radio"  name="defect">
+			<title>	
+				Ist der Sturz auf einen Mangel an der Unfallstelle (z.B. ein Loch ein fehlendes Geländer, eine mangelhafte oder fehlende Beleuchtung, Hindernisse auf der Treppe, Nässe, Glatteis oder Schnee auf der Treppe etc.) zurückzuführen?
+			</title>
+			<option show="defect_description">Ja</option>
+			<option>Nein</option>
+		</question>
+		<container id="defect_description" hidden="1">
+			<question type="textarea">
+				<title>	
+					Falls ja: Bitte beschreiben Sie den Mangel
+				</title>
+				<answer></answer>
+			</question>
+		</container>
+	</container>
+	<container id="">
+		<question type="radio"  name="defect_description">
+			<title>	
+				Ist der Sturz infolge Glatteis und/oder Schnee erfolgt?
+			</title>
+			<option show="ice_snow_questions">Ja</option>
+			<option>Nein</option>
+		</question>
+		<container id="snow_questions" hidden="1">
+			<question name="snow_time" type="textarea">
+				<title>	
+					a) Um welche Uhrzeit ereignete sich der Umfall?
+				</title>
+				<answer></answer>
+			</question>
+			<question name="snow_temps" type="textarea">
+				<title>	
+					b) Waren die Temperaturen um den Gefrierpunkt?
+				</title>
+				<answer></answer>
+			</question>
+			<question name="snow_snowed" type="textarea">
+				<title>	
+					c) Hat es vor dem Treppensturz unmittelbar geschneit oder geregnet?
+				</title>
+				<answer></answer>
+			</question>
+			<question name="snow_measures" type="textarea">
+				<title>	
+					d) Wurden an der Stelle, wo sich der Sturz ereignete, vom Verantwortlichen (z.B. von der Gemeinde, dem Eigentümer der Liegenschaft) Schutzmassnahmen getroffen (z.B. Salzen, Splitten etc.)?
+				</title>
+				<answer></answer>
+			</question>
+		</container>
+	</container>
+	<container id="">
+		<question type="radio"  name="fotos">
+			<title>	
+				Haben Sie Fotos von der Umfallstelle?
+			</title>
+			<option show="fotos_yes">Ja</option>
+			<option show="fotos_no">Nein</option>
+		</question>
+		
+		<container id="fotos_yes" hidden="1">
+			<description>	
+				Falls ja: Bitte laden Sie die Fotos anschliessen unter "Meine Dokumente" hoch. Besten Dank.
+			</description>
+		</container>
+		<container id="fotos_no" hidden="1">
+			<description>	
+				Falls nein: Bitte fertigen Sie - sofern es Ihnen möglich ist - nachträglich Fotos von der Unfallstelle an (unter der Voraussetzung, dass der Mangel noch sichtbar ist) und laden Sie diese unter "Meine Dokumente" hoch. Besten Dank.
+			</description>
+		</container>
+	</container>
+	<container id="">
+		<question type="radio"  name="witnesses">
+			<title>	
+				Gibt es Zeugen, die beim Ereignis vom 01.01.2017 dabei waren?
+			</title>
+			<option show="witnesses_yes">Ja</option>
+			<option>Nein</option>
+		</question>
+		<container id="witnesses_yes" hidden="1">
+			<question type="textarea">
+				<title>	
+					Falls ja: Bitte geben Sie uns den Namen und die Kontaktangaben des Zeugen (Adresse, Telefonnummer, 
+E-Mail) an. Betrachten Sie diese Frage bitte nicht als Zeichen unseres Misstrauens. Allfällige Zeugen werden durch uns nur kontaktiert, wenn es sich aufgrund des Sachverhalts als notwendig erweist. Dies kann z.B. der Fall sein, wenn ein Dritter ein Verschulden für Ihren Unfall trägt. 
+				</title>
+				<answer></answer>
+			</question>
+		</container>
+	</container>
 </survey>

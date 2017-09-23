@@ -104,7 +104,7 @@ abstract class model
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<link rel="icon" href="">
 
-		<title>Swape Space</title>
+		<title>Swap Space</title>
 
 		<link rel="stylesheet" href="css/w3.css">
 		<link rel="stylesheet" href="css/bootstrap.css">
