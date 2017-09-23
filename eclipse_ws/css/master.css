@@ -68,8 +68,6 @@ h1 {
 
 
 
-
-
 img.logo {
     display: block;
     margin-top: 30px;
@@ -79,4 +77,11 @@ img.logo {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0px;
+}
+
+
+.backgroundpic{
+    background-image: url(../pics/background2.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
 }
