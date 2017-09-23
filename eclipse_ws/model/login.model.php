@@ -60,21 +60,22 @@ protected function init($params)
 				</div>
 			</div>
 		</div>-->
-    <div class="w3-card-4" style="max-width:600px">
+
+		<img src="pics/logo.jpg" alt="" class="w3-center w3-padding-32 w3-content w3-image logo">
+
+    <div class="w3-card-4 w3-content w3-center w3-padding-32 w3-light-grey" style="max-width:600px">
       <form class="w3-container" id='login_form' action='dashboard' method='post' onsubmit='return checkLogin();'>
         <div class="w3-section">
           <label><b>Schadensfall-Nr</b></label>
           <input class="w3-input w3-border w3-margin-bottom form-control" id="login_email" type="text" placeholder="Nr." name="dc_nr" required>
           <label><b>Passwort</b></label>
           <input class="w3-input w3-border form-control" type="password" placeholder="Passwort" name="password" required>
-          <button name="submit" value="login" class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Login</button>
-          <input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Erinnere mich
+          <button name="submit" value="login" class="w3-btn w3-block w3-blue w3-section w3-padding" type="submit" style="width:200px">Login</button>
+
         </div>
       </form>
 
-      <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
-        <button type="button" class="w3-button w3-red">Cancel</button>
-      </div>
+
 
     </div>
 		<?php
