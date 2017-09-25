@@ -83,7 +83,7 @@ class dashboard_model extends model
 
 							<br>Vielen Dank für Ihre Unterstützung.<br>
 
-                        <a href="status_overview"> weitere infos</a></p>
+                        <a href="status_overview"> weitere Infos</a></p>
                     </div>
                 </div>
             </div>
